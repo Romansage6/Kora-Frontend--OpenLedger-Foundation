@@ -436,6 +436,8 @@ function SecondaryMarketplaceContent() {
                   variant="outline"
                   size="sm"
                   onClick={() => setMobileFilterOpen(true)}
+                  aria-expanded={mobileFilterOpen}
+                  aria-haspopup="dialog"
                   className="w-full border-zinc-800 bg-zinc-950/80 text-xs"
                 >
                   <SlidersHorizontal className="me-2 h-3.5 w-3.5 text-primary" />
