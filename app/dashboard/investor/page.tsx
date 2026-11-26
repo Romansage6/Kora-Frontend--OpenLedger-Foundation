@@ -176,7 +176,9 @@ export default function InvestorDashboardPage() {
     const target = document.getElementById(DIGEST_DASHBOARD_SECTION_ID);
     if (!target) return;
     digestLandedRef.current = true;
-    target.scrollIntoView({ block: "start" });
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
   }, [isConnected, isInitialLoading, loadTimedOut]);
 
   /**
